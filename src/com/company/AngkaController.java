@@ -7,11 +7,11 @@ public class AngkaController {
     private ArrayList<Integer> list = new ArrayList<>();
     private int jumlah;
 
-    public void firstRandom(){
+    public void firstRandom() {
         System.out.println("Masukkan jumlah angka yang akan di random : ");
 
         Scanner input = new Scanner(System.in);
-        try{
+        try {
             jumlah = input.nextInt();
             list = getRandomNonRepeatingIntegers(jumlah, 1, 20);
         } catch (NumberFormatException e) {
@@ -19,6 +19,7 @@ public class AngkaController {
         }
         menu();
     }
+
     public void menu() {
         Scanner input = new Scanner(System.in);
         boolean counter = true;
@@ -43,7 +44,7 @@ public class AngkaController {
                 System.out.println("Silahkan memilih menu.");
                 System.out.print("Pilih: ");
                 menu = input.nextInt();
-                switch(menu){
+                switch (menu) {
                     case 1:
                         lihatAngka();
                         break;
@@ -60,16 +61,14 @@ public class AngkaController {
                         System.out.println("Terima kasih sudah berkunjung");
                         System.exit(5);
                         break;
-                    default :
+                    default:
                         System.out.println("Menu tidak tersedia");
                         boolean repeat = true;
 
-                        while (repeat)
-                        {
+                        while (repeat) {
                             System.out.print("Pilih: ");
                             menu = input.nextInt();
-                            switch (menu)
-                            {
+                            switch (menu) {
                                 case 1:
                                     lihatAngka();
                                     repeat = false;
@@ -126,7 +125,7 @@ public class AngkaController {
         System.out.println("           Lihat Angka            ");
         System.out.println("==================================");
         for (int i = 0; i < list.size(); i++) {
-            System.out.print(list.get(i)+" ");
+            System.out.print(list.get(i) + " ");
         }
     }
 
@@ -139,7 +138,7 @@ public class AngkaController {
         System.out.println("");
         //show array list
         for (int i = 0; i < list.size(); i++) {
-            System.out.print(list.get(i)+" ");
+            System.out.print(list.get(i) + " ");
         }
         //clear array list
         list.clear();
@@ -150,7 +149,7 @@ public class AngkaController {
 
         //show array list
         for (int i = 0; i < list.size(); i++) {
-            System.out.print(list.get(i)+" ");
+            System.out.print(list.get(i) + " ");
         }
     }
 
@@ -161,7 +160,7 @@ public class AngkaController {
         System.out.println("==================================");
         System.out.println("Before Sort : ");
         for (int i = 0; i < list.size(); i++) {
-            System.out.print(list.get(i)+" ");
+            System.out.print(list.get(i) + " ");
         }
         System.out.println(" ");
         System.out.println("After Sort Ascending : ");
@@ -172,7 +171,7 @@ public class AngkaController {
 //        sortedList.forEach(System.out::print);
 
         for (int i = 0; i < sortedList.size(); i++) {
-            System.out.print(sortedList.get(i)+" ");
+            System.out.print(sortedList.get(i) + " ");
         }
     }
 
@@ -183,18 +182,18 @@ public class AngkaController {
         System.out.println("==================================");
         System.out.println("Before Sort : ");
         for (int i = 0; i < list.size(); i++) {
-            System.out.print(list.get(i)+" ");
+            System.out.print(list.get(i) + " ");
         }
         System.out.println(" ");
         System.out.println("After Sort Descending : ");
         //  sorting desc
 
-//        ArrayList<Integer> sortedList = new ArrayList<>();
-//        ArrayList<Integer> sortedList = Collections.sort(list, Collections.reverseOrder());
+        list.sort(Collections.reverseOrder());
 
-//        for (int i = 0; i < sortedList.size(); i++) {
-//            System.out.print(sortedList.get(i)+" ");
+        for (int i = 0; i < list.size(); i++) {
+            System.out.print(list.get(i) + " ");
         }
 
     }
 
+}
