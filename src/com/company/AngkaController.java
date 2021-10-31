@@ -28,17 +28,11 @@ public class AngkaController {
             System.out.println(" ");
             System.out.println("=====================================");
             System.out.println("************ SORTING TK4 ************");
-            System.out.println(" ");
             System.out.println("1. Lihat Angka");
-            System.out.println(" ");
             System.out.println("2. Acak Angka");
-            System.out.println(" ");
             System.out.println("3. Sorting Angka Ascending");
-            System.out.println(" ");
             System.out.println("4. Sorting Angka Descending");
-            System.out.println(" ");
             System.out.println("5. Keluar");
-            System.out.println(" ");
             System.out.println("=====================================");
             try {
                 System.out.println("Silahkan memilih menu.");
